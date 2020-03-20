@@ -1,0 +1,264 @@
+/*Main Common*/
+@font-face {
+    font-family: 'future';
+    src: url(Fonts/futura.ttf) format('truetype');
+}
+body{
+    font-family: 'future';
+    display: flex;
+    justify-content: center;
+    transition: background-color 1.5s ease;
+    background-color: rgba(218, 207, 182, 0.12);
+}
+body:hover{
+    background-color: #DACFB6;    
+}
+/*Description*/
+.blurb{
+    color: #29130F;
+    font-size: 1em;
+    position: absolute;
+    align-self: center;
+    text-align: center;
+    max-width: 40%;
+    display: none;
+}
+/*Navigation*/
+.mainMenu { 
+    font-size: 1.2em;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.34);
+    border-radius: 5px;
+    padding: 10px;
+}
+.mainMenu:hover{
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.64);    
+}
+.mainMenu a { 
+    text-decoration: none;
+    padding: 15px;
+}
+.mainMenu ul { 
+    list-style-type: none;
+    padding-left: 0px;
+    position: relative;
+    margin-top: 0%;
+}
+.login{
+    cursor: pointer;
+    color: #5b7272;
+}
+.mainMenu a:link{
+    color: #5b7272;
+}
+.mainMenu a:visited{
+    color: #5b7272;
+}
+.mainMenu a:hover, .login:hover{
+    color: #ffffff;
+}
+.mainMenu li{
+    padding: 5px 0;
+    display: inline;
+}
+#sideMenu{
+    display: none;
+}
+#open{
+    display: none;
+}
+/*Logo*/
+#logo{
+    align-self: center;
+    z-index: 100;
+}
+/*Modal*/
+.inputBox {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: #5b7272;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    border-radius: 10px;    
+}
+button:hover {
+    opacity: 0.7;
+}
+.container {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+    text-align: center;
+}
+.container > div a{
+    color: #5A2319;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 200; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.47);
+    padding-top: 60px;
+}
+.modalContent {
+    background-color: #F1F1F1;
+    margin: 5px auto; 
+    border: 1px solid #888;
+    width: 50%; 
+    border-radius: 7px;        
+}
+.closeModal{
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    font-size: 40px;
+    font-weight: bold;
+    color: #5A2319;
+    cursor: pointer;
+}
+/*Full Screen*/
+@media (min-width: 941px){
+    video{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 132%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+    }
+}
+/*Half Screen*/
+@media (max-width: 940px){
+    /*Background*/
+    video{
+        display: none;
+    }
+    /*Logo*/
+    img{
+        opacity: 0.3;        
+    }
+    /*Description*/
+    .blurb{
+        display: block;
+    }
+    /*Navigation*/
+    .mainMenu { 
+        font-size: 2.2vh;
+        background-color: transparent;
+    }
+    .mainMenu li a{
+        padding: 0 1vh;
+    }
+    .mainMenu a:link{
+        color: #29130F;
+    }
+    .mainMenu a:hover{
+        color: #ffffff;
+    }
+    /*Modal*/
+    button{
+        width: 60%;
+    }
+}
+
+/*Quarter Screen*/
+@media (max-width: 470px){
+    /*Body*/
+    body{
+        flex-direction: column;
+        align-items: center;
+    }
+    /*Logo*/
+    #logo{
+       max-width: 100%;
+       z-index: 1;
+    }
+    img{
+        width: 85%;
+        height: 85%;
+    }
+    /*Description*/
+    .blurb{
+        position: static;
+    }
+    /*Navigation*/
+    .mainMenu{
+        display: none;
+    }
+    #sideMenu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        margin: auto;
+        right: 0;
+        background-color: #5b7272;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        text-align:center;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;        
+    }
+    #sideMenu ul { 
+        list-style: none;
+    }
+    #sideMenu a {
+        text-decoration: none;
+    }
+    #sideMenu ul li{
+        padding: 15%;
+    }
+    #sideMenu a:link, .login{
+        color: #29130F;
+    }
+    #sideMenu a:visited{
+        color: #29130F;
+    }
+    #sideMenu a:hover, .login:hover{
+        color: #DACFB6;
+    }
+    #close {
+        font-size: 2em;        
+        position: absolute;
+        top: 5%;
+        right: 0;
+        margin-right:5%;        
+        align-self:flex-start;        
+    }
+    #open{
+        font-size:2em;
+        position: fixed;        
+        cursor: pointer;
+        top: 0;
+        right: 0;
+        margin-right:5%;
+        display: block;
+        z-index: 100;
+    }
+}    

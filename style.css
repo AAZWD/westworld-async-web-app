@@ -1,0 +1,474 @@
+/*Common*/
+@font-face {
+    font-family: 'future';
+    src: url(Fonts/futura.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'western';
+    src: url(Fonts/western.ttf) format('truetype');
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'future';
+    height: 100%;
+    width: auto;
+}
+/*Navigation*/
+.account{
+    cursor: pointer;
+}
+nav a, .account { 
+    text-decoration: none;
+    font-size: 3vh;
+}
+nav ul { 
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+nav a:link, .account{
+    color: #DACFB6;
+}
+nav a:visited, .account{
+    color: #DACFB6;
+}
+nav a:hover, .account:hover{
+    color: #5b7272;
+}
+nav a, .account{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+#login{
+    align-self: flex-end;
+    font-size: 2em;
+}
+/*Navigation Logo*/
+li a img{
+    width: 100px;
+    height: auto;
+}
+ul li:nth-child(4) a{
+    padding: 0;
+}
+ul li:not(:nth-child(4)){
+    padding-top: 15px; 
+}
+/*Main*/
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: linear-gradient(#ffffff, #DACFB6);
+}
+button{
+    border: none;
+    color: #5b7272;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+}
+/*Cabin and Dining*/
+.cabinDiningIntro{
+    text-align: center;
+    font-weight: normal;
+    margin: 2% 10% 0 10%;
+}
+.cabinDiningIntro ul{
+    list-style: none;    
+    -webkit-column-count: 3;
+}
+.cabinDiningIntro ul li {
+    padding-top: 0;
+    padding: 15px;
+}
+.cabinDiningIntro h2 {
+    font-family: 'western';
+    color: #5b7272;
+    font-weight: normal;
+}
+.cabinDiningIntro h4 {
+    margin-bottom: 5%;
+}
+.headerImg{
+    width: 100%;
+    height: 5%;
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 95%;
+    flex-wrap: wrap;
+}
+.filter select{
+    background-image:url(Media/wheel.png);
+    background-repeat:no-repeat;
+    background-position: right;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border: 0.5px solid #DACFB6;
+    border-radius:3px;
+    width: min-content;
+    margin-right: 3%;
+    max-height: 25px;
+    padding-right: 3%;
+}
+.filter button{
+    width: 8%;
+    min-width: 60px;
+    padding: 5px; 
+    border-radius: 10px;
+    font-size: 0.7em;   
+    margin-right: 2%;
+}
+.selections{
+    margin: 0;
+    width: min-content;
+    margin-bottom: 3%;
+}
+#name{
+    font-family: 'western'; 
+    font-size: 1.2em;
+    color: #333F3F;
+}
+.option{
+    width: 20em;
+    opacity: 0.7;
+    border-radius: 4px;
+}
+.option:hover{
+    opacity: 0.8;
+    transition: 0.7s;
+}
+.details{
+    display: none;
+    margin: 0;
+}
+#description{
+    padding-bottom: 5px;
+}
+#vac{
+    font-weight: bold;
+    color: #333F3F;
+    margin: 2% 0 2% 0;
+}
+
+/*Modal*/
+.inputBox {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.modalContent button {
+    background-color: #5b7272;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+    border-radius: 10px;    
+}
+.modalContent input{
+    height: 5%;
+}
+.modalContent button:hover {
+    opacity: 0.7;
+}
+.container {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+    text-align: center;
+}
+.container > div a{
+    color: #5A2319;
+}
+.modal, .modal2 {
+    display: none; 
+    position: fixed; 
+    z-index: 200; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.47);
+    padding-top: 60px;
+}
+.modalContent {
+    background-color: #F1F1F1;
+    margin: 5px auto; 
+    border: 1px solid #888;
+    width: 40%; 
+    border-radius: 7px;        
+}
+.closeModal{
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    font-size: 40px;
+    font-weight: bold;
+    color: #5A2319;
+    cursor: pointer;
+}
+.modalContent div a{
+    font-size: 14px;
+}
+@-webkit-keyframes pulse {
+    from { background-color: rgba(91, 114, 114, 0.2); }
+    to { background-color: rgba(218, 207, 182, 0.12); }
+}
+.book{
+    animation: pulse 1s infinite alternate;
+    
+    border-radius: 10px;
+}
+.dining{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.diningBack{
+    background-repeat:no-repeat;
+    display: flex;
+    flex-direction: column; 
+    align-self: center;
+    width: 70%; 
+    height: auto; 
+    margin-top: 5%; 
+}
+.diningBack:nth-of-type(1){
+    background-image:url(Media/dining/1.jpg);
+}
+.diningBack:nth-of-type(2){
+    background-image:url(Media/dining/2.jpeg);
+}
+.diningBack:nth-of-type(3){
+    background-image:url(Media/dining/3.jpeg);
+}
+.diningBack:nth-of-type(4){
+    background-image:url(Media/dining/4.jpeg);
+    margin-bottom: 5%;
+}
+.diningInfo{
+    padding:3%;
+    background-color: rgba(90, 35, 25, 0.6);
+    margin: 5%;
+    width: 70%;
+    color: #DACFB6;
+}
+/*History*/
+#slideshow{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+    background-position:50% 50%;
+}
+#historyContent{
+    background-color: rgba(91, 114, 114, 0.31);
+    padding: 0 3% 0 3%;
+}
+.historyTitle{
+    font-family: 'western';
+    font-size: 1.5em;
+}
+#historyContent{
+    padding-top: 2%;
+}
+#filler{  
+    visibility: hidden;
+    width: 100%;
+}
+/*Schedule*/
+#scheduleContent{
+    margin: 3%;   
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; 
+}
+#scheduleTitle{
+    font-family: 'western';
+    font-size: 1.7em;
+    align-self: center;
+    margin-bottom: 1%;
+}
+#scheduleInfo{
+    background-color: rgba(91, 114, 114, 0.31);
+    padding: 7%;    
+}
+#instructions{
+    font-weight: bold;
+}
+#dep, #dep-submit{
+    width: 30%;
+    align-self: center;
+    margin-top: 3%;
+}
+#dep{
+    background-image:url(Media/wheel.png);
+    background-repeat:no-repeat;
+    background-position: right;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border: 0.5px solid #5b7272;
+    border-radius:3px;
+}
+#dep-submit{
+    border: none;
+    color: #5b7272;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+#data{
+    width: 35%;
+    text-align: center;
+    align-self: center;
+}
+/*Create Account*/
+form{
+    font-size: 1.5em;    
+    align-self: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 5% 0 5% 0;
+    width: 30%;
+}
+form button{
+    align-self: center;
+}
+form input{
+    height: 25px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/*Error Page*/
+.error{
+    margin: 5% 0 3% 0;
+    text-align: center;
+}
+#errorImg{
+    align-self: center;
+    width: 50%;
+    height: auto;
+}
+/*Footer*/
+footer{
+    border-top: 2px outset #5b7272;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 5px;
+    background-color: #DACFB6;
+    font-size: 0.9em;
+    align-items: center;
+}
+#showMobile{
+    display: none;
+}
+.copyright{
+    font-size: 0.6em;
+    text-align: center;
+    margin-top: 10px;
+}
+.icon{
+    display: none;
+}
+#char{
+    font-size: 1em;
+    cursor: pointer;
+}
+/*Half Screen*/
+@media(max-width:940px){
+    nav a, .account{
+        font-size: 2.2vh;
+    }
+    /*Navigation Logo*/
+    li a img{
+        width: 55%;
+        min-width: 50px;
+        height: auto;
+    }
+    /*Create Account*/
+    form{
+        width: 80%;
+    }
+    /*Cabin and Dining*/
+    .cabinDiningIntro ul{
+        -webkit-column-count: 2;
+    }
+    /*Error Page*/
+    #errorImg{
+        align-self: center;
+        width: 70%;
+        height: auto;
+    }
+}
+/*Between Half and Quarter Screen*/
+@media(max-width:550px){
+    /*Remove Navigation Logo*/
+    ul>li:nth-child(4){
+        display: none;   
+    }
+}
+/*Quarter Screen*/
+@media(max-width:470px){
+    /*Navigation*/
+    nav ul li:not(:nth-child(4)){
+        display: none; 
+    }
+    /*Navigation Logo*/
+    nav ul{
+        justify-content: center;
+        flex-direction: column;
+    }
+    nav ul li:nth-child(4){
+        align-self: center;
+        display: block;   
+        order: -1;       
+    }
+    nav:hover li:not(:nth-child(4)){
+        display: block;
+        position: relative;
+    }
+    /*Cabin and Dining*/
+    .cabinDiningIntro ul{
+        -webkit-column-count: 1;
+    }
+    /*Footer*/
+    #hideMobile{
+        display: none;
+    }
+    #showMobile{
+        display: inline;
+    }
+    #showMobile a{
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+    }
+}

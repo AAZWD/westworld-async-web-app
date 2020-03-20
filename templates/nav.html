@@ -1,0 +1,16 @@
+<header>
+    <nav>
+        <ul>
+            {% for links in link1%}
+            <li><a href="{{links}}">{{name1[loop.index-1]}}</a></li>
+            {% endfor %}
+            <li id="logo">
+                <a id="link" href="index.php"><img src="Media/logoSimple.png" alt="logo link"></a>
+            </li>
+            {% for link2 in link2%}
+            <li><a href="{{link2}}">{{name2[loop.index-1]}}</a></li>
+            {% endfor %}
+            <li class="account">Account</li>
+        </ul>
+    </nav>
+</header>

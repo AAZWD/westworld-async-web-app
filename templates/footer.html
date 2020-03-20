@@ -1,0 +1,30 @@
+<footer>
+        <div class="contact">
+            <div>CONTACT US</div>
+            <br>
+            <div>
+                <span id="hideMobile">1 800 555 5555</span>
+                <span id="showMobile"><a href="tel:18005555555">1 800 555 555</a></span>
+                {% for loc in locations%}
+                    <br> {{loc}}
+                {% endfor %}                
+            </div>
+        </div>
+        <div class="socialMedia">
+            {% for med in media%}                
+                <a href="{{med}}}"><img src="{{icon[loop.index-1]}}"></a>
+            {% endfor %}            
+        </div>
+        <div class="copyright">
+            {{copy}}
+        </div>
+        <div class="references">
+            <div id="char">&omicron;</div>
+            <div class="icon">
+            {% for ref in madeBy%}                                    
+                <br>Icons made by <a href="{{ref}}" title="{{name[loop.index-1]}}">{{name[loop.index-1]}}</a> from <a href="{{from}}" title="Flaticon">www.flaticon.com</a> is licensed by <a href="{{lic}}" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+            {% endfor %}     
+            <div id="pixel">All Photos courtesy of Pexels.com and are licensed under the Creative Commons Zero (CC0) license.</div>            
+            </div>
+        </div>
+    </footer>
