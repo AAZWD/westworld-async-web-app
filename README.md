@@ -7,10 +7,16 @@ Fictional train booking/informational site built using XAMPP stack package
 Westworld fans
 
 ## Technologies
-JS
-JQuery
-AJAX
-PHP
-SQL
-Twig
-Less
+JS  
+JQuery  
+AJAX  
+PHP  
+SQL  
+Twig  
+Less  
+
+## Set Up
+Create database: brl  
+Import  to database: brl.sql  
+Username: project  
+Password: project  
