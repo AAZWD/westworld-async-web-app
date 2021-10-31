@@ -1,7 +1,7 @@
 # Black Ridge Limited Site
 
 ##  Purpose
-Fictional train booking/informational site built using XAMPP stack package 
+Fictional train booking/informational site. Built to practice using AJAX with databases, and tempalting with Twig. 
 
 ## Users
 Westworld fans
