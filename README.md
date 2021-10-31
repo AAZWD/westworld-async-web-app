@@ -1,7 +1,7 @@
 # Black Ridge Limited Site
 
 ##  Purpose
-Fictional train booking/informational site. Built to practice using AJAX with databases, and tempalting with Twig. 
+Fictional train booking/informational site. Built to practice using AJAX/PHP, and tempalting with Twig. 
 
 ## Users
 Westworld fans
