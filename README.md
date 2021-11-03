@@ -1,10 +1,7 @@
 # Black Ridge Limited Booking (Westworld)
 
 ##  Purpose
-Fictional train booking/informational site. Built to practice using AJAX/PHP, and tempalting with Twig. 
-
-## Users
-Westworld fans
+Fictional train booking/informational site based on the Westworld T.V series. Built to practice creating asynchronous websites with AJAX, PHP, and templating (Twig). 
 
 ## Technologies
 JS  
