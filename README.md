@@ -1,4 +1,4 @@
-# Black Ridge Limited (Westworld)
+# Black Ridge Limited Booking (Westworld)
 
 ##  Purpose
 Fictional train booking/informational site. Built to practice using AJAX/PHP, and tempalting with Twig. 
